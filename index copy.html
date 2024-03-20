@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application</title>
+</head>
+<body>
+    <ul id="messages"></ul>
+    <input id="m" autocomplete="off" /><button id="send">Send</button>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        // Receive previous messages
+        socket.on('previousMessages', (messages) => {
+            const messageList = document.getElementById('messages');
+            messages.forEach(({ user, message }) => {
+                const item = document.createElement('li');
+                item.textContent = `${user}: ${message}`;
+                messageList.appendChild(item);
+            });
+        });
+
+        // Send message
+        document.getElementById('send').addEventListener('click', () => {
+            const message = document.getElementById('m').value;
+            const user = prompt('Please enter your user:');
+            socket.emit('chat message', { user, message });
+            document.getElementById('m').value = '';
+            return false;
+        });
+
+        // Receive message
+        socket.on('chat message', (data) => {
+            const { user, message } = data;
+            const item = document.createElement('li');
+            item.textContent = `${user}: ${message}`;
+            document.getElementById('messages').appendChild(item);
+        });
+    </script>
+</body>
+</html>

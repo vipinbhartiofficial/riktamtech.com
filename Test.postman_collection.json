@@ -1,0 +1,327 @@
+{
+	"info": {
+		"_postman_id": "b18a948f-8f86-4d65-811d-1924478753a7",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31029338"
+	},
+	"item": [
+		{
+			"name": "Create Users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOnsiZGF0YVZhbHVlcyI6eyJpZCI6MSwibmFtZSI6IlN1bWl0IiwibW9iaWxlX25vIjpudWxsLCJlbWFpbCI6InN1bWl0LmJoYXJ0aUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1Njc4Iiwicm9sZXMiOiJBRE1JTiIsImNyZWF0ZWRfYXQiOiIyMDI0LTAzLTA5VDA2OjQzOjI2LjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAyNC0wMy0wOVQwNjo0MzoyNi4wMDBaIn0sIl9wcmV2aW91c0RhdGFWYWx1ZXMiOnsiaWQiOjEsIm5hbWUiOiJTdW1pdCIsIm1vYmlsZV9ubyI6bnVsbCwiZW1haWwiOiJzdW1pdC5iaGFydGlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0NTY3OCIsInJvbGVzIjoiQURNSU4iLCJjcmVhdGVkX2F0IjoiMjAyNC0wMy0wOVQwNjo0MzoyNi4wMDBaIiwidXBkYXRlZF9hdCI6IjIwMjQtMDMtMDlUMDY6NDM6MjYuMDAwWiJ9LCJ1bmlxbm8iOjEsIl9jaGFuZ2VkIjp7fSwiX29wdGlvbnMiOnsiaXNOZXdSZWNvcmQiOmZhbHNlLCJfc2NoZW1hIjpudWxsLCJfc2NoZW1hRGVsaW1pdGVyIjoiIiwicmF3Ijp0cnVlLCJhdHRyaWJ1dGVzIjpbImlkIiwibmFtZSIsIm1vYmlsZV9ubyIsImVtYWlsIiwicGFzc3dvcmQiLCJyb2xlcyIsImNyZWF0ZWRfYXQiLCJ1cGRhdGVkX2F0Il19LCJpc05ld1JlY29yZCI6ZmFsc2V9LCJpYXQiOjE3MDk5NjY2MTAsImV4cCI6MTcyNTUxODYxMH0.MDlh3yJeeHttCW1LerXEqelgBkzYprKPdRmrc1e8nog",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Sumit\",\n    \"mobile_no\" : 7607844710,\n    \"email\" : \"sumit.bharti@gmail.com\",\n    \"password\" : \"12345678\",\n    \"roles\" : \"ADMIN\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2020/api/v1/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2020",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOnsiZGF0YVZhbHVlcyI6eyJpZCI6MSwibmFtZSI6IlN1bWl0IiwibW9iaWxlX25vIjpudWxsLCJlbWFpbCI6InN1bWl0LmJoYXJ0aUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1Njc4Iiwicm9sZXMiOiJBRE1JTiIsImNyZWF0ZWRfYXQiOiIyMDI0LTAzLTA5VDA2OjQzOjI2LjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAyNC0wMy0wOVQwNjo0MzoyNi4wMDBaIn0sIl9wcmV2aW91c0RhdGFWYWx1ZXMiOnsiaWQiOjEsIm5hbWUiOiJTdW1pdCIsIm1vYmlsZV9ubyI6bnVsbCwiZW1haWwiOiJzdW1pdC5iaGFydGlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0NTY3OCIsInJvbGVzIjoiQURNSU4iLCJjcmVhdGVkX2F0IjoiMjAyNC0wMy0wOVQwNjo0MzoyNi4wMDBaIiwidXBkYXRlZF9hdCI6IjIwMjQtMDMtMDlUMDY6NDM6MjYuMDAwWiJ9LCJ1bmlxbm8iOjEsIl9jaGFuZ2VkIjp7fSwiX29wdGlvbnMiOnsiaXNOZXdSZWNvcmQiOmZhbHNlLCJfc2NoZW1hIjpudWxsLCJfc2NoZW1hRGVsaW1pdGVyIjoiIiwicmF3Ijp0cnVlLCJhdHRyaWJ1dGVzIjpbImlkIiwibmFtZSIsIm1vYmlsZV9ubyIsImVtYWlsIiwicGFzc3dvcmQiLCJyb2xlcyIsImNyZWF0ZWRfYXQiLCJ1cGRhdGVkX2F0Il19LCJpc05ld1JlY29yZCI6ZmFsc2V9LCJpYXQiOjE3MDk5NjY2MTAsImV4cCI6MTcyNTUxODYxMH0.MDlh3yJeeHttCW1LerXEqelgBkzYprKPdRmrc1e8nog",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"search\" : 7607844710\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2020/api/v1/user/listing",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2020",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"listing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Groups",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOnsiZGF0YVZhbHVlcyI6eyJpZCI6MSwibmFtZSI6IlN1bWl0IiwibW9iaWxlX25vIjpudWxsLCJlbWFpbCI6InN1bWl0LmJoYXJ0aUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1Njc4Iiwicm9sZXMiOiJBRE1JTiIsImNyZWF0ZWRfYXQiOiIyMDI0LTAzLTA5VDA2OjQzOjI2LjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAyNC0wMy0wOVQwNjo0MzoyNi4wMDBaIn0sIl9wcmV2aW91c0RhdGFWYWx1ZXMiOnsiaWQiOjEsIm5hbWUiOiJTdW1pdCIsIm1vYmlsZV9ubyI6bnVsbCwiZW1haWwiOiJzdW1pdC5iaGFydGlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0NTY3OCIsInJvbGVzIjoiQURNSU4iLCJjcmVhdGVkX2F0IjoiMjAyNC0wMy0wOVQwNjo0MzoyNi4wMDBaIiwidXBkYXRlZF9hdCI6IjIwMjQtMDMtMDlUMDY6NDM6MjYuMDAwWiJ9LCJ1bmlxbm8iOjEsIl9jaGFuZ2VkIjp7fSwiX29wdGlvbnMiOnsiaXNOZXdSZWNvcmQiOmZhbHNlLCJfc2NoZW1hIjpudWxsLCJfc2NoZW1hRGVsaW1pdGVyIjoiIiwicmF3Ijp0cnVlLCJhdHRyaWJ1dGVzIjpbImlkIiwibmFtZSIsIm1vYmlsZV9ubyIsImVtYWlsIiwicGFzc3dvcmQiLCJyb2xlcyIsImNyZWF0ZWRfYXQiLCJ1cGRhdGVkX2F0Il19LCJpc05ld1JlY29yZCI6ZmFsc2V9LCJpYXQiOjE3MDk5NjY2MTAsImV4cCI6MTcyNTUxODYxMH0.MDlh3yJeeHttCW1LerXEqelgBkzYprKPdRmrc1e8nog",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Our Friendship\",\n    \"members\" : [1,2,3,4,5]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2020/api/v1/message/create-group",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2020",
+					"path": [
+						"api",
+						"v1",
+						"message",
+						"create-group"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Groups",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOnsiZGF0YVZhbHVlcyI6eyJpZCI6MSwibmFtZSI6IlN1bWl0IiwibW9iaWxlX25vIjpudWxsLCJlbWFpbCI6InN1bWl0LmJoYXJ0aUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1Njc4Iiwicm9sZXMiOiJBRE1JTiIsImNyZWF0ZWRfYXQiOiIyMDI0LTAzLTA5VDA2OjQzOjI2LjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAyNC0wMy0wOVQwNjo0MzoyNi4wMDBaIn0sIl9wcmV2aW91c0RhdGFWYWx1ZXMiOnsiaWQiOjEsIm5hbWUiOiJTdW1pdCIsIm1vYmlsZV9ubyI6bnVsbCwiZW1haWwiOiJzdW1pdC5iaGFydGlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0NTY3OCIsInJvbGVzIjoiQURNSU4iLCJjcmVhdGVkX2F0IjoiMjAyNC0wMy0wOVQwNjo0MzoyNi4wMDBaIiwidXBkYXRlZF9hdCI6IjIwMjQtMDMtMDlUMDY6NDM6MjYuMDAwWiJ9LCJ1bmlxbm8iOjEsIl9jaGFuZ2VkIjp7fSwiX29wdGlvbnMiOnsiaXNOZXdSZWNvcmQiOmZhbHNlLCJfc2NoZW1hIjpudWxsLCJfc2NoZW1hRGVsaW1pdGVyIjoiIiwicmF3Ijp0cnVlLCJhdHRyaWJ1dGVzIjpbImlkIiwibmFtZSIsIm1vYmlsZV9ubyIsImVtYWlsIiwicGFzc3dvcmQiLCJyb2xlcyIsImNyZWF0ZWRfYXQiLCJ1cGRhdGVkX2F0Il19LCJpc05ld1JlY29yZCI6ZmFsc2V9LCJpYXQiOjE3MDk5NjY2MTAsImV4cCI6MTcyNTUxODYxMH0.MDlh3yJeeHttCW1LerXEqelgBkzYprKPdRmrc1e8nog",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Our Friendship\",\n    \"members\" : [1,4,5,3]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2020/api/v1/message/update-group/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2020",
+					"path": [
+						"api",
+						"v1",
+						"message",
+						"update-group",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Chatting",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOnsiZGF0YVZhbHVlcyI6eyJpZCI6MSwibmFtZSI6IlN1bWl0IiwibW9iaWxlX25vIjpudWxsLCJlbWFpbCI6InN1bWl0LmJoYXJ0aUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1Njc4Iiwicm9sZXMiOiJBRE1JTiIsImNyZWF0ZWRfYXQiOiIyMDI0LTAzLTA5VDA2OjQzOjI2LjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAyNC0wMy0wOVQwNjo0MzoyNi4wMDBaIn0sIl9wcmV2aW91c0RhdGFWYWx1ZXMiOnsiaWQiOjEsIm5hbWUiOiJTdW1pdCIsIm1vYmlsZV9ubyI6bnVsbCwiZW1haWwiOiJzdW1pdC5iaGFydGlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjM0NTY3OCIsInJvbGVzIjoiQURNSU4iLCJjcmVhdGVkX2F0IjoiMjAyNC0wMy0wOVQwNjo0MzoyNi4wMDBaIiwidXBkYXRlZF9hdCI6IjIwMjQtMDMtMDlUMDY6NDM6MjYuMDAwWiJ9LCJ1bmlxbm8iOjEsIl9jaGFuZ2VkIjp7fSwiX29wdGlvbnMiOnsiaXNOZXdSZWNvcmQiOmZhbHNlLCJfc2NoZW1hIjpudWxsLCJfc2NoZW1hRGVsaW1pdGVyIjoiIiwicmF3Ijp0cnVlLCJhdHRyaWJ1dGVzIjpbImlkIiwibmFtZSIsIm1vYmlsZV9ubyIsImVtYWlsIiwicGFzc3dvcmQiLCJyb2xlcyIsImNyZWF0ZWRfYXQiLCJ1cGRhdGVkX2F0Il19LCJpc05ld1JlY29yZCI6ZmFsc2V9LCJpYXQiOjE3MDk5NjY2MTAsImV4cCI6MTcyNTUxODYxMH0.MDlh3yJeeHttCW1LerXEqelgBkzYprKPdRmrc1e8nog",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"group_id\" : 100,\n    \"messages\" : \"Hi\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2020/api/v1/message/chatting",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2020",
+					"path": [
+						"api",
+						"v1",
+						"message",
+						"chatting"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\" : \"sumit.bharti@gmail.com\",\n    \"pass\" : \"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2020/api/v1/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2020",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3030/info?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"info"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\" : 9007844710\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2020/api/v1/user/update/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2020",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2020/api/v1/user/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2020",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
